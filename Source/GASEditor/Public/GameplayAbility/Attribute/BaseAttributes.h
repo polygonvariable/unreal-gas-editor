@@ -13,7 +13,6 @@
 	GAMEPLAYATTRIBUTE_VALUE_SETTER(PropertyName) \
 	GAMEPLAYATTRIBUTE_VALUE_INITTER(PropertyName) \
 
-
 /**
  * 
  */
@@ -24,18 +23,24 @@ class GASEDITOR_API UBaseAttributes : public UAttributeSet
 
 public:
 
-//
-// @GAS_ATTIBUTE_EDITOR
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	FGameplayAttributeData Health;
-	ATTRIBUTE_MACROS(UBaseAttributes, Health)
+// @GAS_EDITOR_START
 
 UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	FGameplayAttributeData Mana;
-	ATTRIBUTE_MACROS(UBaseAttributes, Mana)
+FGameplayAttributeData Health;
+ATTRIBUTE_MACROS(UBaseAttributes, Health)
 
-// @GAS_ATTIBUTE_EDITOR
-//
+UPROPERTY(EditAnywhere, BlueprintReadOnly)
+FGameplayAttributeData HealthMax;
+ATTRIBUTE_MACROS(UBaseAttributes, HealthMax)
+
+UPROPERTY(EditAnywhere, BlueprintReadOnly)
+FGameplayAttributeData Mana;
+ATTRIBUTE_MACROS(UBaseAttributes, Mana)
+
+UPROPERTY(EditAnywhere, BlueprintReadOnly)
+FGameplayAttributeData ManaMax;
+ATTRIBUTE_MACROS(UBaseAttributes, ManaMax)
+
+// @GAS_EDITOR_END
 
 };
