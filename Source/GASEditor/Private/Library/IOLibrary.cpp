@@ -1,9 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "IOLibrary.h"
+#include "Library/IOLibrary.h"
 #include "Misc/FileHelper.h"
-#include <regex>
 
 FString UIOLibrary::ReadFile(const FString& FilePath)
 {
@@ -42,7 +41,7 @@ FString UIOLibrary::RegexMatch(const FString& TestString, const FString& Pattern
 	return FString();
 }
 
-TArray<FString> UIOLibrary::RegexMatches(const FString& TestString, const FString& Pattern)
+TArray<FString> UIOLibrary::RegexMatchAll(const FString& TestString, const FString& Pattern)
 {
     TArray<FString> matches;
 
@@ -51,12 +50,13 @@ TArray<FString> UIOLibrary::RegexMatches(const FString& TestString, const FStrin
 
     while (regexMatcher.FindNext())
     {
-        int32 index = 0;
+        // int32 index = 0;
+        int32 index = 1;
         FString match;
 
         while (!(match = regexMatcher.GetCaptureGroup(index)).IsEmpty())
         {
-			matches.Add(match);
+            matches.Add(match);
             ++index;
         }
     }
@@ -66,7 +66,7 @@ TArray<FString> UIOLibrary::RegexMatches(const FString& TestString, const FStrin
 
 FString UIOLibrary::RegexReplaceAll(const FString& TestString, const FString& Pattern, const FString& ReplaceString)
 {
-	TArray<FString> matches = RegexMatches(TestString, Pattern);
+	TArray<FString> matches = RegexMatchAll(TestString, Pattern);
 
 	FString result = TestString;
 

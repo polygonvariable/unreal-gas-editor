@@ -30,7 +30,7 @@ class GASEDITOR_API UIOLibrary : public UBlueprintFunctionLibrary
 	static FString RegexMatch(const FString& TestString, const FString& Pattern);
 
 	UFUNCTION(BlueprintCallable)
-	static TArray<FString> RegexMatches(const FString& TestString, const FString& Pattern);
+	static TArray<FString> RegexMatchAll(const FString& TestString, const FString& Pattern);
 
 	UFUNCTION(BlueprintCallable)
 	static FString RegexReplaceAll(const FString& TestString, const FString& Pattern, const FString& ReplaceString);
