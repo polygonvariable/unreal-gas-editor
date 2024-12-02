@@ -19,7 +19,7 @@ Check out video on how to use it:
 
 #### 1. Enable Gameplay Ability System Plugin
 In the `Plugins` window, enable the `Gameplay Ability System` plugin and restart the editor.
-![](Documentation/Image/ability_plugin.png){ width=75% }
+![](Documentation/Image/ability_plugin.png)
 
 ---
 
@@ -27,17 +27,17 @@ In the `Plugins` window, enable the `Gameplay Ability System` plugin and restart
 For the plugin to work, you need to create a base attribute class. This step is necessary to include the required attribute set header files. This is a one-time process.
 
 - Go to `Tools` and click on `New C++ Class`.
-![](Documentation/Image/create_base_attr00.png){ width=75% }
+![](Documentation/Image/create_base_attr00.png)
 
 - Search for `Attribute Set` and click `Next`.
-![](Documentation/Image/create_base_attr01.png){ width=75% }
+![](Documentation/Image/create_base_attr01.png)
 
 - Enter the class name. You can choose any name.
-![](Documentation/Image/create_base_attr02.png){ width=75% }
+![](Documentation/Image/create_base_attr02.png)
 
 - Once created, Unreal Engine will prompt you to open the code editor to build the class. You can choose to build it now to avoid rebuilding later while setting up the plugin, or click No and close Unreal Engine for now.
 - For now I'll click `No` and close Unreal Engine.
-![](Documentation/Image/create_base_attr03.png){ width=75% }
+![](Documentation/Image/create_base_attr03.png)
 
 ---
 
@@ -45,61 +45,61 @@ For the plugin to work, you need to create a base attribute class. This step is 
 Download the plugin code that matches your Unreal Engine version.
 
 - Go to the `Releases` section.
-![](Documentation/Image/download01.png){ width=75% }
+![](Documentation/Image/download01.png)
 
 - Download the `.rar` file.
-![](Documentation/Image/download02.png){ width=75% }
+![](Documentation/Image/download02.png)
 
 ---
 
 #### 4. Add the Plugin to Your Project
 
 - Create a `Plugins` folder in your project directory if it doesn’t already exist.
-![](Documentation/Image/create_plugin.png){ width=75% }
+![](Documentation/Image/create_plugin.png)
 
 - Extract the plugin files and copy the `GASPlugin` folder into the `Plugins` directory.
-![](Documentation/Image/gas_copy.png){ width=75% }
+![](Documentation/Image/gas_copy.png)
 
 ---
 
 #### 5. Start the Editor
 
 - Launch the project. You’ll be prompted to build the `project` and the `GASPlugin`. If you’ve built the project before, only the plugin will need to be built.
-![](Documentation/Image/build_final.png){ width=75% }
+![](Documentation/Image/build_final.png)
 
 - Once the build completes, the editor will start.
-![](Documentation/Image/building_final.png){ width=75% }
+![](Documentation/Image/building_final.png)
 
 ---
 
 #### 6. GAS Editor
 
 - Open the `Plugins` window and ensure that the `GASPlugin` is enabled.
-![](Documentation/Image/gas_plugin_check.png){ width=75% }
+![](Documentation/Image/gas_plugin_check.png)
 
 - Navigate to the `GAS plugin` folder. If the folder is not visible, ensure that `Show Plugin Content` is enabled.
-![](Documentation/Image/show_plugin.png){ width=75% }
+![](Documentation/Image/show_plugin.png)
 
 - Locate the `GASAttributeEditor` in `Plugins\GAS Editor Content\Editor`. Right-click it and select `Run Editor Utility Widget`.
-![](Documentation/Image/gas_editor_open.png){ width=75% }
+![](Documentation/Image/gas_editor_open.png)
 
 - Once the editor window is open, you can enter the class name and path of an existing attribute set. For this guide, however, we'll create a new attribute set.
-![](Documentation/Image/gas_editor_file.png){ width=75% }
+![](Documentation/Image/gas_editor_file.png)
 
 - Enter the class name and path for the new attribute set, then click the `New` button. This will create and load the new attribute set.
-![](Documentation/Image/gas_editor_new.png){ width=75% }
-![](Documentation/Image/gas_editor_new_msg01.png){ width=75% }
-![](Documentation/Image/gas_editor_new_msg02.png){ width=75% }
+![](Documentation/Image/gas_editor_new.png)
+![](Documentation/Image/gas_editor_new_msg01.png)
+![](Documentation/Image/gas_editor_new_msg02.png)
 
 - If successfully created, the attribute set will appear in the Generated Code box.
-![](Documentation/Image/gas_editor_new_attr.png){ width=75% }
+![](Documentation/Image/gas_editor_new_attr.png)
 
 - Add an attribute, like Health, by typing its name and clicking `Add`.
-![](Documentation/Image/gas_editor_new_attr.png){ width=75% }
-![](Documentation/Image/gas_editor_new_attrs.png){ width=75% }
+![](Documentation/Image/gas_editor_new_attr.png)
+![](Documentation/Image/gas_editor_new_attrs.png)
 
 - Save the attribute set by clicking the `Save` button. A success message will appear upon successful saving.
-![](Documentation/Image/gas_editor_save.png){ width=75% }
+![](Documentation/Image/gas_editor_save.png)
 
 ---
 
@@ -107,10 +107,10 @@ Download the plugin code that matches your Unreal Engine version.
 After saving the attributes, you can use Live Coding to hot reload the project.
 
 - Click the hot reload button or press `Ctrl + Alt + F11`.
-![](Documentation/Image/proj_reload01.png){ width=75% }
+![](Documentation/Image/proj_reload01.png)
 
 - Once reloaded, the new attributes will be ready for use.
-![](Documentation/Image/proj_reload02.png){ width=75% }
+![](Documentation/Image/proj_reload02.png)
 
 ---
 
@@ -118,10 +118,10 @@ After saving the attributes, you can use Live Coding to hot reload the project.
 You can create a simple `Gameplay Effect` to test whether the attributes were created successfully.
 
 - Create a new `Gameplay Effect` and open it.
-![](Documentation/Image/test_build01.png){ width=75% }
+![](Documentation/Image/test_build01.png)
 
 - Navigate to the `Modifiers` section and check if the attributes are listed.
-![](Documentation/Image/test_build02.png){ width=75% }
+![](Documentation/Image/test_build02.png)
 
 
 # Editor Window
