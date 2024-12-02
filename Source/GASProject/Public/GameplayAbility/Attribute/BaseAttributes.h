@@ -33,14 +33,6 @@ UPROPERTY(EditAnywhere, BlueprintReadOnly)
 FGameplayAttributeData HealthMax;
 ATTRIBUTE_MACROS(UBaseAttributes, HealthMax)
 
-UPROPERTY(EditAnywhere, BlueprintReadOnly)
-FGameplayAttributeData Stamina;
-ATTRIBUTE_MACROS(UBaseAttributes, Stamina)
-
-UPROPERTY(EditAnywhere, BlueprintReadOnly)
-FGameplayAttributeData StaminaMax;
-ATTRIBUTE_MACROS(UBaseAttributes, StaminaMax)
-
 // @GAS_EDITOR_END
 
 };
