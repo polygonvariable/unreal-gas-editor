@@ -3,13 +3,13 @@
 using UnrealBuildTool;
 using System.Collections.Generic;
 
-public class GASEditorEditorTarget : TargetRules
+public class GASProjectEditorTarget : TargetRules
 {
-	public GASEditorEditorTarget(TargetInfo Target) : base(Target)
+	public GASProjectEditorTarget(TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Editor;
 		DefaultBuildSettings = BuildSettingsVersion.V5;
 
-		ExtraModuleNames.AddRange( new string[] { "GASEditor" } );
+		ExtraModuleNames.AddRange( new string[] { "GASProject" } );
 	}
 }

@@ -17,7 +17,7 @@
  * 
  */
 UCLASS()
-class GASEDITOR_API UBaseAttributes : public UAttributeSet
+class GASPROJECT_API UBaseAttributes : public UAttributeSet
 {
 	GENERATED_BODY()
 
@@ -34,12 +34,12 @@ FGameplayAttributeData HealthMax;
 ATTRIBUTE_MACROS(UBaseAttributes, HealthMax)
 
 UPROPERTY(EditAnywhere, BlueprintReadOnly)
-FGameplayAttributeData Mana;
-ATTRIBUTE_MACROS(UBaseAttributes, Mana)
+FGameplayAttributeData Stamina;
+ATTRIBUTE_MACROS(UBaseAttributes, Stamina)
 
 UPROPERTY(EditAnywhere, BlueprintReadOnly)
-FGameplayAttributeData ManaMax;
-ATTRIBUTE_MACROS(UBaseAttributes, ManaMax)
+FGameplayAttributeData StaminaMax;
+ATTRIBUTE_MACROS(UBaseAttributes, StaminaMax)
 
 // @GAS_EDITOR_END
 

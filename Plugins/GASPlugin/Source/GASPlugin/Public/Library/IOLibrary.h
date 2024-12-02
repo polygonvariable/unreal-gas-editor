@@ -10,7 +10,7 @@
  * 
  */
 UCLASS()
-class GASEDITOR_API UIOLibrary : public UBlueprintFunctionLibrary
+class GASPLUGIN_API UIOLibrary : public UBlueprintFunctionLibrary
 {
 	GENERATED_BODY()
 
