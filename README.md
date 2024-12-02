@@ -1,6 +1,5 @@
 # GAS Editor 🪂
 GAS Editor allows to quicky create attribute set and attributes directly from Unreal Engine editor.
-Check out video on how to use it:
 
 # Index
 - [How to Use ?](#how-to-use)
@@ -13,7 +12,9 @@ Check out video on how to use it:
   - [Hot Reload](#7-hot-reload)
   - [Testing Attributes](#8-testing-attributes)
 - [Editor Window](#editor-window)
+- [Preview](#preview)
 - [Known Issues](#known-issues)
+
 
 # How to use ?
 
@@ -125,6 +126,8 @@ You can create a simple `Gameplay Effect` to test whether the attributes were cr
 
 
 # Editor Window
+![](Documentation/Image/editor01.png)
+
 1. **`Class Name:`**
 Specifies the name of the class header file.
 
@@ -168,6 +171,9 @@ Adds a new attribute.
 
 14. **`Auto Add Max:`**
 If enabled, automatically creates corresponding `Max` attributes (e.g., `HealthMax` for `Health`).
+
+# Preview
+![](Documentation/Image/editor02.png)
 
 # Known Issues:
 - **Attribute disappearance after editor restart:** If you restart the editor, attributes might disappear. To avoid this, delete the `/Binaries` folder before reopening the editor.
