@@ -3,6 +3,8 @@
 
 #include "Library/IOLibrary.h"
 #include "Misc/FileHelper.h"
+#include "DesktopPlatformModule.h"
+#include "IDesktopPlatform.h"
 
 FString UIOLibrary::ReadFile(const FString& FilePath)
 {
@@ -88,4 +90,44 @@ FString UIOLibrary::ReplaceFirstMatch(FString SourceString, const FString& Searc
 	}
 
 	return SourceString;
+}
+
+
+FString UIOLibrary::OpenFileDialog()
+{
+
+	IDesktopPlatform* desktopPlatform = FDesktopPlatformModule::Get();
+	if (!desktopPlatform)
+	{
+		return FString();
+	}
+
+	TArray<FString> outFiles;
+	FString defaultPath = FPaths::ProjectDir();
+	FString fileTypes = TEXT("*.h");
+	FString dialogTitle = TEXT("Choose a File");
+
+	bool bOpened = desktopPlatform->OpenFileDialog(nullptr, dialogTitle, defaultPath, TEXT(""), fileTypes, EFileDialogFlags::None, outFiles);
+
+	return bOpened && outFiles.Num() > 0 ? outFiles[0] : FString();
+
+}
+
+FString UIOLibrary::OpenFolderDialog()
+{
+
+	IDesktopPlatform* desktopPlatform = FDesktopPlatformModule::Get();
+	if (!desktopPlatform)
+	{
+		return FString();
+	}
+
+	FString outFolder;
+	FString defaultPath = FPaths::ProjectDir();
+	FString dialogTitle = TEXT("Choose a Folder");
+
+	bool bOpened = desktopPlatform->OpenDirectoryDialog(nullptr, dialogTitle, defaultPath, outFolder);
+
+	return bOpened ? outFolder : FString();
+
 }

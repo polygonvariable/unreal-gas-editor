@@ -38,4 +38,10 @@ class GASPLUGIN_API UIOLibrary : public UBlueprintFunctionLibrary
 	UFUNCTION(BlueprintCallable, BlueprintPure)
 	static FString ReplaceFirstMatch(FString SourceString, const FString& SearchString, const FString& ReplaceString);
 
+	UFUNCTION(BlueprintCallable)
+	static FString OpenFileDialog();
+
+	UFUNCTION(BlueprintCallable)
+	static FString OpenFolderDialog();
+
 };
